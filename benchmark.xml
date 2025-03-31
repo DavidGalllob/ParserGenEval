@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<!--
+This file is part of BenchExec, a framework for reliable benchmarking:
+https://github.com/sosy-lab/benchexec
+
+SPDX-FileCopyrightText: 2007-2020 Dirk Beyer <https://www.sosy-lab.org>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
+<!DOCTYPE benchmark PUBLIC "+//IDN sosy-lab.org//DTD BenchExec benchmark 2.3//EN" "https://www.sosy-lab.org/benchexec/benchmark-2.3.dtd">
+<benchmark tool="javasmt" 
+          timelimit="900s" 
+          hardtimelimit="1000s" 
+          memlimit="16GB"
+          cpuCores="2"
+          displayName="JavaSMT">
+
+  <rundefinition name="smt2files">
+    <tasks>
+      <includesfile>files.set</includesfile>
+    </tasks>
+  <!--propertyfile>benchmark.properties</propertyfile -->
+  </rundefinition>
+
+</benchmark>

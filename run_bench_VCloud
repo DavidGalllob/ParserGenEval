@@ -1,0 +1,9 @@
+#!/bin/sh
+#You need to be logged into the ubuntu2402 host!
+./retrieve-jars.sh
+if [ $? -ne 0 ]; then
+  echo "Fehler: retrieve-jars.sh fehlgeschlagen!"
+  exit 1
+fi
+
+benchexec/contrib/vcloud-benchmark.py benchmark.xml --vcloudMaster vcloud-master.sosy-lab.org --vcloudClientHeap 15000 --no-container --tool-directory java-smt/ --vcloudCPU 1230
